@@ -1,0 +1,10 @@
+body { 
+    background-color: rgb(133, 141, 141);    
+    margin: auto; 
+    width: 50%;   
+    padding: 100px; 
+}
+
+ ul li { 
+    list-style-type: none;
+}
