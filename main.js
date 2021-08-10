@@ -19,7 +19,7 @@ const createList = (title, author) => {
   li.appendChild(button);
   const ul = document.getElementById('bookList');
   ul.appendChild(li);
-}
+};
 
 const remove = (e) => {
   const takeItem = document.querySelectorAll('.rmItem');
@@ -29,7 +29,7 @@ const remove = (e) => {
   const updatedLibrary = JSON.parse(localStorage.getItem('books'));
   document.getElementById('bookList').innerHTML = '';
   updatedLibrary.forEach((item) => { createList(item.title, item.author); });
-}
+};
 
 const add = () => {
   const title = document.getElementById('title').value;
@@ -41,7 +41,7 @@ const add = () => {
   bookArray.push(book);
   localStorage.setItem('books', JSON.stringify(bookArray));
   createList(title, author);
-}
+};
 
 library.forEach((item) => { createList(item.title, item.author); });
 /* eslint-enable no-unused-vars, no-use-before-define, consistent-return */
