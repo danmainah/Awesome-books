@@ -35,6 +35,9 @@ function add() {
   const title = document.getElementById('title').value;
   const author = document.getElementById('author').value;
   const book = new Book(title, author);
+  if(title === "" && author === "") {
+      return false
+  }
   bookArray.push(book);
   localStorage.setItem('books', JSON.stringify(bookArray));
   createList(title, author);
