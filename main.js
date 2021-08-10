@@ -4,34 +4,38 @@ const bookArray = localStorage.getItem('books') ? JSON.parse(localStorage.getIte
 localStorage.setItem('books', JSON.stringify(bookArray));
 const library = JSON.parse(localStorage.getItem('books'));
 
-function Book(title, author) {
-  this.title = title;
-  this.author = author;
-}
+class Book {
+  constructor(title, author) {
+    this.title = title;
+    this.author = author;
+  }
 
-const createList = (title, author) => {
+  createList  (book) {
   const li = document.createElement('li');
-  li.textContent = `${title} - by ${author}`;
+  li.textContent = `${book.title} - by ${book.author}`;
   const button = document.createElement('button');
   button.setAttribute('class', 'rmItem');
   button.innerHTML = 'Remove';
-  button.addEventListener('click', remove);
+  button.addEventListener('click', book.remove);
   li.appendChild(button);
   const ul = document.getElementById('bookList');
   ul.appendChild(li);
-};
+}
 
-const remove = (e) => {
+ remove  (e) {
   const takeItem = document.querySelectorAll('.rmItem');
   const bookIndex = bookArray.indexOf.call(takeItem, e.target);
   bookArray.splice(bookIndex, 1);
   localStorage.setItem('books', JSON.stringify(bookArray));
   const updatedLibrary = JSON.parse(localStorage.getItem('books'));
   document.getElementById('bookList').innerHTML = '';
-  updatedLibrary.forEach((item) => { createList(item.title, item.author); });
-};
+  updatedLibrary.forEach((item) => {
+    const libr = new Book(item.title, item.author); 
+    libr.createList(libr)
+  });
+}
 
-const add = () => {
+ add ()  {
   const title = document.getElementById('title').value;
   const author = document.getElementById('author').value;
   const book = new Book(title, author);
@@ -40,8 +44,14 @@ const add = () => {
   }
   bookArray.push(book);
   localStorage.setItem('books', JSON.stringify(bookArray));
-  createList(title, author);
-};
+  this.createList(book);
+}
+}
 
-library.forEach((item) => { createList(item.title, item.author); });
+const lib = new Book();
+library.forEach((item) => {
+   const libr = new Book(item.title, item.author); 
+   lib.createList(libr);
+  });
+
 /* eslint-enable no-unused-vars, no-use-before-define, consistent-return */
