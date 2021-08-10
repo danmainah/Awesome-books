@@ -9,7 +9,7 @@ function Book(title, author) {
   this.author = author;
 }
 
-function createList(title, author) {
+createList = (title, author) => {
   const li = document.createElement('li');
   li.textContent = `${title} - by ${author}`;
   const button = document.createElement('button');
@@ -21,7 +21,7 @@ function createList(title, author) {
   ul.appendChild(li);
 }
 
-function remove(e) {
+remove = (e) => {
   const takeItem = document.querySelectorAll('.rmItem');
   const bookIndex = bookArray.indexOf.call(takeItem, e.target);
   bookArray.splice(bookIndex, 1);
@@ -31,7 +31,7 @@ function remove(e) {
   updatedLibrary.forEach((item) => { createList(item.title, item.author); });
 }
 
-function add() {
+add = () => {
   const title = document.getElementById('title').value;
   const author = document.getElementById('author').value;
   const book = new Book(title, author);
