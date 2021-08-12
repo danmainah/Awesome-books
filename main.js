@@ -1,5 +1,4 @@
 /* eslint-disable no-unused-vars, no-use-before-define, consistent-return, class-methods-use-this */
-
 const bookArray = localStorage.getItem('books')
   ? JSON.parse(localStorage.getItem('books'))
   : [];
@@ -55,5 +54,9 @@ library.forEach((item) => {
   const libr = new Book(item.title, item.author);
   lib.createList(libr);
 });
+
+const time = document.getElementById('local-time');
+const now = luxon.DateTime.now();
+time.innerHTML = now.toLocaleString(luxon.DateTime.DATETIME_MED);
 
 /* eslint-enable no-unused-vars, no-use-before-define, consistent-return, class-methods-use-this */

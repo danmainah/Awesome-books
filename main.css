@@ -34,15 +34,20 @@ h1 {
 
 #title,
 #author {
-  margin-bottom: 5px;
+  margin-bottom: 20px;
+  width: 30%;
+  height: 20px;
 }
 
 form {
   text-align: center;
+  margin-top: 50px;
 }
 
 .add-btn {
-  margin-left: 130px;
+  height: 20px;
+  width: 50px;
+  margin-left: 310px;
 }
 
 .form-title {
@@ -53,7 +58,7 @@ form {
 }
 
 .contact-title {
-  margin-bottom: 5px;
+  margin-bottom: 35px;
   margin-left: auto;
   margin-right: auto;
   width: fit-content;
@@ -69,6 +74,7 @@ form {
 }
 
 .contact-info {
+  margin-top: 35px;
   text-align: left;
   width: 30%;
   margin-left: auto;
@@ -78,14 +84,21 @@ form {
 .li1 {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   font-weight: normal;
+}
+
+.luxon {
+  text-align: right;
+  margin-bottom: 40px;
 }
 
 .nav {
   background-color: white;
-  width: 100%;
+  width: 85%;
   font-weight: bold;
+  position: fixed;
+  top: 10px;
 }
 
 .nav-bar {
@@ -120,11 +133,14 @@ form {
 
 footer {
   background-color: white;
+  position: fixed;
+  bottom: 10px;
+  width: 85%;
 }
 
 .footer {
-  padding: 5px;
-  margin-top: 10px;
+  padding: 7px;
+  margin-top: 5px;
   margin-left: 10px;
 }
 
