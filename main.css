@@ -15,7 +15,9 @@ h1 {
   text-align: center;
   margin-right: auto;
   margin-left: auto;
+  border: 1px solid black;
 }
+
 #bookList li {
   list-style-type: none;
   display: flex;
@@ -51,15 +53,12 @@ form {
   width: fit-content;
 }
 
-#bookList {
-  border: 1px solid black;
-}
-
 .nav {
-  background-color:white;
+  background-color: white;
   width: 100%;
-
+  font-weight: bold;
 }
+
 .nav-bar {
   display: flex;
   justify-content: space-between;
@@ -79,6 +78,10 @@ form {
 }
 
 .nav-title {
+  list-style: none;
+}
+
+.nav-title a{
   text-decoration: none;
   color: black;
 }
@@ -87,11 +90,13 @@ form {
   border-right: 1px solid black;
   border-left: 1px solid black;
 }
+
 footer {
   background-color: white;
 }
+
 .footer {
-  padding : 5px;
+  padding: 5px;
   margin-top: 10px;
   margin-left: 10px;
 }
