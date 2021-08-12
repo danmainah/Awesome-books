@@ -62,7 +62,7 @@ form {
 .nav-bar {
   display: flex;
   justify-content: space-between;
-  padding: 10px;
+  padding: 5px;
 }
 
 .list {
@@ -78,10 +78,12 @@ form {
 }
 
 .nav-title {
+  padding: 4px;
   list-style: none;
+  align-items: center;
 }
 
-.nav-title a{
+.nav-title a {
   text-decoration: none;
   color: black;
 }
