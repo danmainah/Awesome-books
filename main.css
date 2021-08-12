@@ -56,7 +56,7 @@ form {
 }
 
 .nav {
-  background-color: rgb(235, 214, 214);
+  background-color:white;
   width: 100%;
 
 }
@@ -75,13 +75,23 @@ form {
 .list a {
   text-decoration: none;
   padding: 5px;
+  color: black;
 }
 
 .nav-title {
   text-decoration: none;
+  color: black;
 }
 
 .add-new {
   border-right: 1px solid black;
   border-left: 1px solid black;
+}
+footer {
+  background-color: white;
+}
+.footer {
+  padding : 5px;
+  margin-top: 10px;
+  margin-left: 10px;
 }
