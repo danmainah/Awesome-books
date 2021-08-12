@@ -1,4 +1,4 @@
-/* eslint-disable no-use-before-define, consistent-return, class-methods-use-this, no-undef*/
+/* eslint-disable no-use-before-define, consistent-return, class-methods-use-this, no-undef */
 const bookArray = localStorage.getItem('books')
   ? JSON.parse(localStorage.getItem('books'))
   : [];
