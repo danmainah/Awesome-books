@@ -49,8 +49,37 @@ form {
   margin-bottom: 5px;
   margin-left: auto;
   margin-right: auto;
-  border-top: 1px solid black;
   width: fit-content;
+}
+
+.contact-title {
+  margin-bottom: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+}
+
+.contact-text {
+  text-align: center;
+  font-weight: bolder;
+}
+
+.left-text {
+  margin-right: 240px;
+}
+
+.contact-info {
+  text-align: left;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.li1 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  font-weight: normal;
 }
 
 .nav {
@@ -80,9 +109,6 @@ form {
   padding: 14px;
   list-style: none;
   align-items: center;
-}
-
-.nav-title a {
   text-decoration: none;
   color: black;
 }
@@ -100,4 +126,16 @@ footer {
   padding: 5px;
   margin-top: 10px;
   margin-left: 10px;
+}
+
+div[id^="list-content"],
+div[id^="contact-content"],
+div[id^="add-new-content"] {
+  display: none;
+}
+
+div[id^="list-content"]:target,
+div[id^="contact-content"]:target,
+div[id^="add-new-content"]:target {
+  display: block;
 }
