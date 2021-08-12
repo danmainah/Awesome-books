@@ -1,5 +1,4 @@
-/* eslint-disable no-unused-vars, no-use-before-define, consistent-return, class-methods-use-this */
-
+/* eslint-disable no-use-before-define, consistent-return, class-methods-use-this, no-undef */
 const bookArray = localStorage.getItem('books')
   ? JSON.parse(localStorage.getItem('books'))
   : [];
@@ -56,4 +55,8 @@ library.forEach((item) => {
   lib.createList(libr);
 });
 
-/* eslint-enable no-unused-vars, no-use-before-define, consistent-return, class-methods-use-this */
+const time = document.getElementById('local-time');
+const now = luxon.DateTime.now();
+time.innerHTML = now.toLocaleString(luxon.DateTime.DATETIME_MED);
+
+/* eslint-enable no-use-before-define, consistent-return, class-methods-use-this, no-undef */
