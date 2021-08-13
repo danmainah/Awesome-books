@@ -17,7 +17,7 @@
 
 ## Live Demo
 
-[Awesome Books](https://rawcdn.githack.com/danmainah/Awesome-books/d821c125b55e58ee65e81ae8932b7515026f0025/index.html)
+[Awesome Books](https://rawcdn.githack.com/danmainah/Awesome-books/3cd24e1db895ffa3a8ee697aa7be897f6b233e9e/index.html)
 
 ## How to use
 
